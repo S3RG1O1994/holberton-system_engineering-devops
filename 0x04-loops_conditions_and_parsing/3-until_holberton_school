@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 4 bad luck, 8 is your chance
+cnt=0
+until [ $cnt -eq 10 ]
+do
+    echo "Holberton School"
+	cnt=$((cnt + 1))
+done

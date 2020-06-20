@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# For ls
+for cnt in *
+do
+    echo "$cnt" | rev | cut -d"-" -f 1 | rev
+done

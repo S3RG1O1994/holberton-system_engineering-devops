@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# FizzBuzz algorithm - shell script
+for cnt in {1..100}
+do
+    if [ $((cnt % 3)) -eq 0 ] && [ $((cnt % 5)) -eq 0 ]
+    then
+		echo "FizzBuzz"
+    elif [ $((cnt % 3)) -eq 0 ]
+    then
+		echo "Fizz"
+    elif [ $((cnt % 5)) -eq 0 ]
+    then
+		echo "Buzz"
+    else
+		echo "$cnt"
+    fi
+done
