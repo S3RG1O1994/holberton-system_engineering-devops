@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # script for view state of ports the pc
 
-sudo netstat -putona
+sudo netstat -lp
