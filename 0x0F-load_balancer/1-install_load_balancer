@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is for install nginx in server
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-1.7
+sudo apt-get update
+sudo apt-get install haproxy=1.7.\*
+echo " frontend load-balance 
+    bind : 80
+    mode : http
+    balance : roundrobin
+    default_backend load-balance
+    server 1463-web-01 34.74.248.124:80 check
+    server 1463-web-02 35.237.140.145:80 check" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
