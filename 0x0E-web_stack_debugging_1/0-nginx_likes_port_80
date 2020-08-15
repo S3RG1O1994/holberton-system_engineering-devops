@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This is script for reconfigurate ports in server
+sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+sudo service nginx restart
