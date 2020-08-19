@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# This is script for view ip address of an domain
+
+function www()
+{
+    if (($# == 1))
+    then
+        for sub in www lb-01 web-01 web-02
+        do
+            echo -n "The subdomain $sub is a "
+            dig "$sub.$1" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}' | tail -1
+            echo -n " record and points to " 
+            dig "$sub.$1" | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tail -1
+        done
+    else
+        echo -n "The subdomain $2 is a "
+        dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}' | tail -1
+        echo -n " record and points to " 
+        dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tail -1
+        
+    fi
+}
+
+if (($# == 1))
+then
+    www "$1"
+else
+    www "$1" "$2"
+fi
