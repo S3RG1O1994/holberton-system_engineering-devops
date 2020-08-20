@@ -1,0 +1,9 @@
+sudo su
+which ufw
+ufw status
+ufw allow 22
+ufw enable
+ufw status verbose
+ufw allow http
+ufw allow https
+ufw status
