@@ -1,1 +1,17 @@
-This project is for management server and install apache.
+# 0x0D. Web stack debugging #0
+
+## Resources:books:
+Read or watch:
+
+---
+## Learning Objectives:bulb:
+What you should learn from this project:
+
+---
+
+### [0. Give me a page!](./0-give_me_a_page)
+* Be sure to read the Docker concept page.
+
+---
+## Author
+* **Sergio Diaz** - [SERGIO1994](https://github.com/S3RG1O1994)
