@@ -14,9 +14,11 @@ if __name__ == '__main__':
     obj_j = {}
     new_list = []
     for item in todo:
-        new_dict['task'] = item.get('title')
-        new_dict['completed'] = item.get('completed')
-        new_dict['username'] = name
+        new_dict = {
+            'task': item.get('title'),
+            'completed': item.get('completed'),
+            'username': name
+        }
         new_list.append(new_dict)
     obj_j[argv[1]] = new_list
     with open('{}.json'.format(argv[1]), mode='w') as json_file:
