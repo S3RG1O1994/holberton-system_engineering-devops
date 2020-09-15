@@ -12,5 +12,6 @@ if __name__ == '__main__':
     with open('{}.csv'.format(argv[1]), mode='w') as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for item in todo:
-            writer.writerow([int(argv[1]), name,
-                item.get('completed'), item.get('title')])
+            writer.writerow([
+                int(argv[1]), name, item.get('completed'), item.get('title')
+                ])
