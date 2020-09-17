@@ -12,4 +12,5 @@ def top_ten(subreddit):
     if query.status_code == 200:
         for i in file['children']:
             print(i['data']['title'])
-    print(None)
+    else:
+        print(None)
